@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="20dp"
+    tools:context=".NPaciente5Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lectorlogoorigin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/alatsi"
+            android:text="Para finalizar ingrese datos de Paciente:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="left"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="175dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:hint="NUMERO DE TELEFONO"
+            app:hintTextColor="@color/black"
+            android:id="@+id/usuarioIS">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:textCursorDrawable="@drawable/edit_text_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/backwithborder"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="11dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:hint="CORREO DEL PACIENTE"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:textCursorDrawable="@drawable/edit_text_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/backwithborder"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="11dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:hint="NOMBRE DE CONTACTO DE EMERGENCIA"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:textCursorDrawable="@drawable/edit_text_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/backwithborder"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="11dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:hint="NUMERO DE TELEFONO DEL CONTACO"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:textCursorDrawable="@drawable/edit_text_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/backwithborder"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="11dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:hint="USERNAME DE EL DOCTOR QUE ATENDIO"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:textCursorDrawable="@drawable/edit_text_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/backwithborder"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/BTN5"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="FINALIZAR Y GENERAR CODIGO QR"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:backgroundTint="#FF465F"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

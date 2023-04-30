@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "325750784133",
+    "project_id": "lectorsalud-81554",
+    "storage_bucket": "lectorsalud-81554.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325750784133:android:ae20870246b1f9f749a9ec",
+        "android_client_info": {
+          "package_name": "com.cetis22.lectorsalud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325750784133-5lqrlf4lulu6iqdn1bcur8ovmb78893b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cetis22.lectorsalud",
+            "certificate_hash": "2c131fca243bf2ec6a444f57981f9e950ac66c3c"
+          }
+        },
+        {
+          "client_id": "325750784133-6t3p9dlk0itul30b09t40s37onut013b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjCH7tA9LCeD0MffEYabU1IMwJtFeQcA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325750784133-6t3p9dlk0itul30b09t40s37onut013b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

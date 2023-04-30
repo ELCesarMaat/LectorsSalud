@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:padding="20dp"
+    android:layout_height="match_parent"
+    tools:context=".QRgeneradoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/qrCodeGenerador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qrimagen"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="11dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:hint="CURP DEL PACIENTE"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EditQrGenerador"
+                android:textCursorDrawable="@drawable/edit_text_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/backwithborder"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/BtnQrGenerador"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="GENERAR QR"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:backgroundTint="#3887F9"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/BtnSave"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="GUARDAR"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:backgroundTint="#F44336"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"/>
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

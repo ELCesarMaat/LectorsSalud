@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/lectorlogoorigin"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LectorSalud"
+        tools:targetApi="31">
+        <activity
+            android:name=".ListaPacientesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InformacionPacienteNew"
+            android:exported="false" />
+        <activity
+            android:name=".VisualizardosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VisualizarPDFActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GuardarImgenPrueba"
+            android:exported="false" />
+        <activity
+            android:name=".InfPACIENTEActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.InformacionPaciente"
+            android:exported="false"
+            android:label="@string/title_activity_informacion_paciente" />
+        <activity
+            android:name=".QRgeneradoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GeneradorQRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NPaciente5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".NPaciente3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".NPaciente2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DatosNuevoPacienteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NuevoPacieneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TokenDeSeguridadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PantallaInicio"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LectorCodigoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LecQRActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LectorQrrActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LectorActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SelectorActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RegistroActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ActivityBlanco"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".IniciarSecionActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ActivityBienvenida"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
