@@ -37,6 +37,16 @@ public class InfPACIENTEActivity extends AppCompatActivity {
                 b.txtFechaNacimiento.getEditText().setText(ds.getString("fecha_nacimienti"));
                 b.txtCurp.getEditText().setText(ds.getString("curp"));
                 b.txtSangre.getEditText().setText(ds.getString("tipo_de_sangre"));
+                b.txtUltimoExamen.getEditText().setText(ds.getString("fech_ultimo_examen"));
+                b.txtEnfermedades.getEditText().setText(ds.getString("enfermedades"));
+                b.txtmedicamentos.getEditText().setText(ds.getString("medicamentos_consumidos"));
+                b.txtDosis.getEditText().setText(ds.getString("dosis_medicamentos"));
+                b.txtFechaUltimoMedicamento.getEditText().setText(ds.getString("fecha_ultimo_medicamento"));
+                b.txtFechaUltimaCirujia.getEditText().setText(ds.getString("fecha_ultima_cirujia"));
+                b.txtAlergias.getEditText().setText(ds.getString("alergias"));
+                b.txtEnfermadesCronicas.getEditText().setText(ds.getString("enfermedades_cronicas"));
+                b.txtAntecedentes.setText(ds.getString("antecedentes_familiares"));
+
                 Toast.makeText(this, it.getResult().getString("nombre"), Toast.LENGTH_SHORT).show();
             }
         });
