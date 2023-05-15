@@ -1,140 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp"
-    android:background="@color/white"
-    tools:context=".NPaciente2Activity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/lectorlogoorigin"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/alatsi"
-            android:text="Ingresa los datos de el paciente:"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:gravity="left"/>
-
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:padding="20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="35dp" android:layout_marginBottom="20dp">
+        <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/lectorlogoorigin"/>
+        <TextView android:textSize="20sp" android:textColor="@color/black" android:gravity="left" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Ingresa los datos de el paciente:" android:fontFamily="@font/alatsi"/>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="175dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="vertical">
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:textColorHint="@color/black"
-        android:hint="ENFERMEDADES DEL PACIENTE"
-        app:hintTextColor="@color/black"
-        android:id="@+id/usuarioIS">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/backwithborder"
-            android:textColor="@color/black"
-            android:textCursorDrawable="@drawable/edit_text_cursor" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:textColorHint="@color/black"
-            android:hint="MEDICAMENTOS CONSUMIDOS"
-            android:layout_marginTop="10dp"
-            app:hintTextColor="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/backwithborder"
-                android:textColor="@color/black"
-                android:textCursorDrawable="@drawable/edit_text_cursor" />
-
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="175dp" android:layout_marginBottom="20dp">
+        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/black" android:id="@+id/usuarioIS" android:layout_width="match_parent" android:layout_height="80dp" android:hint="ENFERMEDADES DEL PACIENTE" app:hintTextColor="@color/black">
+            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/black" android:background="@drawable/backwithborder" android:layout_width="match_parent" android:layout_height="match_parent" android:textCursorDrawable="@drawable/edit_text_cursor"/>
         </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:textColorHint="@color/black"
-            android:hint="DOSIS DE MEDICAMENTOS"
-            android:layout_marginTop="10dp"
-            app:hintTextColor="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/backwithborder"
-                android:textColor="@color/black"
-                android:textCursorDrawable="@drawable/edit_text_cursor" />
-
+        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/black" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginTop="10dp" android:hint="MEDICAMENTOS CONSUMIDOS" app:hintTextColor="@color/black">
+            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/black" android:background="@drawable/backwithborder" android:layout_width="match_parent" android:layout_height="match_parent" android:textCursorDrawable="@drawable/edit_text_cursor"/>
         </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:textColorHint="@color/black"
-            android:hint="ULTIMA FECHA DE CONSUMO DE MEDICAMENTO"
-            android:layout_marginTop="10dp"
-            app:hintTextColor="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/backwithborder"
-                android:textColor="@color/black"
-                android:textCursorDrawable="@drawable/edit_text_cursor" />
-
+        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/black" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginTop="10dp" android:hint="DOSIS DE MEDICAMENTOS" app:hintTextColor="@color/black">
+            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/black" android:background="@drawable/backwithborder" android:layout_width="match_parent" android:layout_height="match_parent" android:textCursorDrawable="@drawable/edit_text_cursor"/>
         </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_marginTop="11dp"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/black"
-        android:hint="FECHA DE SU ULTIMA CIRUGIA"
-        app:hintTextColor="@color/black">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:textCursorDrawable="@drawable/edit_text_cursor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:background="@drawable/backwithborder"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/BTN2"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="SIGUIENTE"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:backgroundTint="#3887F9"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="5dp"/>
-
+        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/black" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginTop="10dp" android:hint="ULTIMA FECHA DE CONSUMO DE MEDICAMENTO" app:hintTextColor="@color/black">
+            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/black" android:background="@drawable/backwithborder" android:layout_width="match_parent" android:layout_height="match_parent" android:textCursorDrawable="@drawable/edit_text_cursor"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:hint="FECHA DE SU ULTIMA CIRUGIA" app:hintTextColor="@color/black">
+            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/black" android:background="@drawable/backwithborder" android:layout_width="match_parent" android:layout_height="wrap_content" android:textCursorDrawable="@drawable/edit_text_cursor"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button android:textSize="15sp" android:textColor="@color/white" android:id="@+id/BTN2" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="8dp" android:layout_marginBottom="5dp" android:text="SIGUIENTE" android:backgroundTint="#3887f9"/>
     </LinearLayout>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

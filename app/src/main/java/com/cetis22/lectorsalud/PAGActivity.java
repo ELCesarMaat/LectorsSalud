@@ -1,144 +1,100 @@
 package com.cetis22.lectorsalud;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.webkit.URLUtil;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-
+import androidx.lifecycle.CoroutineLiveDataKt;
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
-
 import java.io.IOException;
 
+/* loaded from: classes5.dex */
 public class PAGActivity extends AppCompatActivity {
-
     private CameraSource cameraSource;
     private SurfaceView cameraView;
     private final int MY_PERMISSIONS_REQUEST_CAMERA = 1;
     private String token = "";
     private String tokenanterior = "";
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pag);
-
-        cameraView = (SurfaceView) findViewById(R.id.camera_view);
+        this.cameraView = (SurfaceView) findViewById(R.id.camera_view);
         initQR();
     }
 
     public void initQR() {
-
-        //creo el detector QR
-        BarcodeDetector barcodeDetector =
-                new BarcodeDetector.Builder(this)
-                .setBarcodeFormats(Barcode.ALL_FORMATS)
-                .build();
-
-        //Crea la camara
-        cameraSource = new CameraSource
-                .Builder(this, barcodeDetector)
-                .setRequestedPreviewSize(1600, 1024)
-                .setAutoFocusEnabled(true) //You should add this feature
-        .build();
-
-        //listener de ciclo de vida de la camara
-        cameraView.getHolder().addCallback(new SurfaceHolder.Callback() {
-            @Override
-            public void surfaceCreated(@NonNull SurfaceHolder holder) {
-
-                //Verifico si el usuario dio los permisos para la camara
-                if (ActivityCompat.checkSelfPermission(PAGActivity.this, Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED) {
-
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        // verificamos la version de ANdroid que sea al menos la M para mostrar
-                        // el dialog de la solicitud de la camara
-                        if (shouldShowRequestPermissionRationale(
-                                Manifest.permission.CAMERA));
-                        requestPermissions(new String[]{Manifest.permission.CAMERA},
-                                MY_PERMISSIONS_REQUEST_CAMERA);
-                    }
-                    return;
-                }else {
+        BarcodeDetector barcodeDetector = new BarcodeDetector.Builder(this).setBarcodeFormats(0).build();
+        this.cameraSource = new CameraSource.Builder(this, barcodeDetector).setRequestedPreviewSize(1600, 1024).setAutoFocusEnabled(true).build();
+        this.cameraView.getHolder().addCallback(new SurfaceHolder.Callback() { // from class: com.cetis22.lectorsalud.PAGActivity.1
+            @Override // android.view.SurfaceHolder.Callback
+            public void surfaceCreated(SurfaceHolder holder) {
+                if (ActivityCompat.checkSelfPermission(PAGActivity.this, "android.permission.CAMERA") == 0) {
                     try {
-                        cameraSource.start(cameraView.getHolder());
-                    }catch (IOException ie) {
+                        PAGActivity.this.cameraSource.start(PAGActivity.this.cameraView.getHolder());
+                        return;
+                    } catch (IOException ie) {
                         Log.e("CAMERA SOURCE", ie.getMessage());
+                        return;
                     }
                 }
+                PAGActivity.this.shouldShowRequestPermissionRationale("android.permission.CAMERA");
+                PAGActivity.this.requestPermissions(new String[]{"android.permission.CAMERA"}, 1);
             }
 
-            @Override
-            public void surfaceChanged(@NonNull SurfaceHolder holder, int format, int width, int height) {
+            @Override // android.view.SurfaceHolder.Callback
+            public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
             }
 
-            @Override
-            public void surfaceDestroyed(@NonNull SurfaceHolder holder) {
-                cameraSource.stop();
+            @Override // android.view.SurfaceHolder.Callback
+            public void surfaceDestroyed(SurfaceHolder holder) {
+                PAGActivity.this.cameraSource.stop();
             }
         });
-
-        //Preparo el dectetor de QR
-        barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
-            @Override
+        barcodeDetector.setProcessor(new Detector.Processor<Barcode>() { // from class: com.cetis22.lectorsalud.PAGActivity.2
+            @Override // com.google.android.gms.vision.Detector.Processor
             public void release() {
             }
 
-            @Override
+            @Override // com.google.android.gms.vision.Detector.Processor
             public void receiveDetections(Detector.Detections<Barcode> detections) {
-                final SparseArray<Barcode> barcodes = detections.getDetectedItems();
-
-                if (barcodes.size() >0) {
-
-                    // obtenemos el token
-                    token = barcodes.valueAt(0).displayValue.toString();
-
-                    // verificamos que el token anterior no se igual al actual
-                    // esto es util para evitar multiples llamadas empleando el mismo token
-                    if (!token.equals(tokenanterior)) {
-
-                        // guardamos el ultimo token proceado
-                        tokenanterior = token;
-                        Log.i("token", token);
-
-                        if (URLUtil.isValidUrl(token)) {
-                            // si es una URL valida abre el navegador
-                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(token));
-                            startActivity(browserIntent);
-                        }else {
-                            //comparte en otras apps
+                SparseArray<Barcode> barcodes = detections.getDetectedItems();
+                if (barcodes.size() > 0) {
+                    PAGActivity.this.token = barcodes.valueAt(0).displayValue.toString();
+                    if (!PAGActivity.this.token.equals(PAGActivity.this.tokenanterior)) {
+                        PAGActivity pAGActivity = PAGActivity.this;
+                        pAGActivity.tokenanterior = pAGActivity.token;
+                        Log.i("token", PAGActivity.this.token);
+                        if (URLUtil.isValidUrl(PAGActivity.this.token)) {
+                            Intent browserIntent = new Intent("android.intent.action.VIEW", Uri.parse(PAGActivity.this.token));
+                            PAGActivity.this.startActivity(browserIntent);
+                        } else {
                             Intent shareIntent = new Intent();
-                            shareIntent.setAction(Intent.ACTION_SEND);
-                            shareIntent.putExtra(Intent.EXTRA_TEXT, token);
+                            shareIntent.setAction("android.intent.action.SEND");
+                            shareIntent.putExtra("android.intent.extra.TEXT", PAGActivity.this.token);
                             shareIntent.setType("text/plain");
-                            startActivity(shareIntent);
+                            PAGActivity.this.startActivity(shareIntent);
                         }
-
-                        new Thread(new Runnable() {
-                            @Override
+                        new Thread(new Runnable() { // from class: com.cetis22.lectorsalud.PAGActivity.2.1
+                            @Override // java.lang.Runnable
                             public void run() {
                                 try {
                                     synchronized (this) {
-                                        wait(5000);
-                                        //Limpiamos el token
-                                        tokenanterior = "";
+                                        wait(CoroutineLiveDataKt.DEFAULT_TIMEOUT);
+                                        PAGActivity.this.tokenanterior = "";
                                     }
-                                }catch (InterruptedException e) {
-                                    // TODO Auto-generated catch block
+                                } catch (InterruptedException e) {
                                     Log.e("Error", "Waiting didnt work!!");
                                     e.printStackTrace();
                                 }

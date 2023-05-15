@@ -1,8 +1,12 @@
 package com.cetis22.lectorsalud;
 
+/* loaded from: classes5.dex */
 public class UserHelperClass {
-
-    String name, username, email, password, tiposangre;
+    String email;
+    String name;
+    String password;
+    String tiposangre;
+    String username;
 
     public UserHelperClass() {
     }
@@ -16,7 +20,7 @@ public class UserHelperClass {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -24,7 +28,7 @@ public class UserHelperClass {
     }
 
     public String getUsername() {
-        return username;
+        return this.username;
     }
 
     public void setUsername(String username) {
@@ -32,7 +36,7 @@ public class UserHelperClass {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -40,7 +44,7 @@ public class UserHelperClass {
     }
 
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
     public void setPassword(String password) {
@@ -48,11 +52,10 @@ public class UserHelperClass {
     }
 
     public String getTiposangre() {
-        return tiposangre;
+        return this.tiposangre;
     }
 
     public void setTiposangre(String tiposangre) {
         this.tiposangre = tiposangre;
     }
-
 }

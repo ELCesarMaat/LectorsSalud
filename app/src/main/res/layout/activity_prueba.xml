@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3887F9"
-    tools:context=".ActivityBienvenida">
+    android:background="#3887f9">
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageButton"
@@ -18,20 +16,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/btnIS"
-            android:layout_marginTop="25dp"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginLeft="30dp"
-            android:textSize="17sp"
+            android:layout_marginTop="25dp"
             android:layout_marginRight="30dp"
             android:backgroundTint="@color/white"
+            android:text="INICIAR SECIÓN"
             android:textColor="@color/black"
-            android:text="INICIAR SECIÓN"/>
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/textviewregister"
@@ -45,8 +43,5 @@
             android:text="No tienes cuenta? Registrate"
             android:textColor="@color/white"
             android:textSize="19sp" />
-
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

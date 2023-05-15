@@ -1,8 +1,20 @@
 package com.cetis22.lectorsalud;
 
+/* loaded from: classes5.dex */
 public class NuevosDatosPacinteHelperClass {
-
-    String nombrecompleto, fechadenacimiento, curp, tipodesangre, fechaultexamen, enfermedadesp, medicamentoscons, dosismedicamentos, ufechacons, fechacirujiault, alergias, enfercronicas, antefamiliares;
+    String alergias;
+    String antefamiliares;
+    String curp;
+    String dosismedicamentos;
+    String enfercronicas;
+    String enfermedadesp;
+    String fechacirujiault;
+    String fechadenacimiento;
+    String fechaultexamen;
+    String medicamentoscons;
+    String nombrecompleto;
+    String tipodesangre;
+    String ufechacons;
 
     public NuevosDatosPacinteHelperClass() {
     }
@@ -24,7 +36,7 @@ public class NuevosDatosPacinteHelperClass {
     }
 
     public String getNombrecompleto() {
-        return nombrecompleto;
+        return this.nombrecompleto;
     }
 
     public void setNombrecompleto(String nombrecompleto) {
@@ -32,7 +44,7 @@ public class NuevosDatosPacinteHelperClass {
     }
 
     public String getFechadenacimiento() {
-        return fechadenacimiento;
+        return this.fechadenacimiento;
     }
 
     public void setFechadenacimiento(String fechadenacimiento) {
@@ -40,7 +52,7 @@ public class NuevosDatosPacinteHelperClass {
     }
 
     public String getCurp() {
-        return curp;
+        return this.curp;
     }
 
     public void setCurp(String curp) {
@@ -48,7 +60,7 @@ public class NuevosDatosPacinteHelperClass {
     }
 
     public String getTipodesangre() {
-        return tipodesangre;
+        return this.tipodesangre;
     }
 
     public void setTipodesangre(String tipodesangre) {
@@ -56,38 +68,38 @@ public class NuevosDatosPacinteHelperClass {
     }
 
     public String getFechaultexamen() {
-        return fechaultexamen;
+        return this.fechaultexamen;
     }
 
     public String getEnfermedadesp() {
-        return enfermedadesp;
+        return this.enfermedadesp;
     }
 
     public String getMedicamentoscons() {
-        return medicamentoscons;
+        return this.medicamentoscons;
     }
 
     public String getDosismedicamentos() {
-        return dosismedicamentos;
+        return this.dosismedicamentos;
     }
 
     public String getUfechacons() {
-        return ufechacons;
+        return this.ufechacons;
     }
 
     public String getFechacirujiault() {
-        return fechacirujiault;
+        return this.fechacirujiault;
     }
 
     public String getAlergias() {
-        return alergias;
+        return this.alergias;
     }
 
     public String getEnfercronicas() {
-        return enfercronicas;
+        return this.enfercronicas;
     }
 
     public String getAntefamiliares() {
-        return antefamiliares;
+        return this.antefamiliares;
     }
 }

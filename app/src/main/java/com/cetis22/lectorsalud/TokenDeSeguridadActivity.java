@@ -1,73 +1,51 @@
 package com.cetis22.lectorsalud;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 
+/* loaded from: classes5.dex */
 public class TokenDeSeguridadActivity extends AppCompatActivity {
-
-    // LOGICA PARA QUE EL USUARIO PUEDA INGRESAR EL TOKEN Y PODER INGRESAR A LA APP
-
-    Button usuarioEnLinea;
-    TextInputLayout tokenSeguridad;
     TextInputLayout nombrehospital;
+    TextInputLayout tokenSeguridad;
+    Button usuarioEnLinea;
 
-    @SuppressLint("MissingInflatedId")
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_token_de_seguridad);
-
-        usuarioEnLinea = findViewById(R.id.btnUsuarioRegisrado);
-        tokenSeguridad = findViewById(R.id.tokenRegist);
-
-        usuarioEnLinea.setOnClickListener(new View.OnClickListener() {
-            @Override
+        this.usuarioEnLinea = (Button) findViewById(R.id.btnUsuarioRegisrado);
+        this.tokenSeguridad = (TextInputLayout) findViewById(R.id.tokenRegist);
+        this.usuarioEnLinea.setOnClickListener(new View.OnClickListener() { // from class: com.cetis22.lectorsalud.TokenDeSeguridadActivity.1
+            @Override // android.view.View.OnClickListener
             public void onClick(View view) {
-                IniciarSeccionn();
+                TokenDeSeguridadActivity.this.IniciarSeccionn();
             }
         });
     }
 
-    // VALIDACIONES DE PASSWORD (CONTRASEÑA) - USARIO YA DADO DE ALTA CON LA BASE DE DATOS
-    private Boolean validateToken(){
-        String val = tokenSeguridad.getEditText().getText().toString();
-
-        if (val.isEmpty()){
-            tokenSeguridad.setError("No puede estar vacio");
-            return  false;
-        }else{
-            tokenSeguridad.setError(null);
-            tokenSeguridad.setErrorEnabled(false);
-            return true;
+    private Boolean validateToken() {
+        String val = this.tokenSeguridad.getEditText().getText().toString();
+        if (val.isEmpty()) {
+            this.tokenSeguridad.setError("No puede estar vacio");
+            return false;
         }
+        this.tokenSeguridad.setError(null);
+        this.tokenSeguridad.setErrorEnabled(false);
+        return true;
     }
 
-    private void IniciarSeccionn(){
-        if (!validateToken()){
+    /* JADX INFO: Access modifiers changed from: private */
+    public void IniciarSeccionn() {
+        if (!validateToken().booleanValue()) {
             return;
-        }else {
-            accesoPermitido();
         }
+        accesoPermitido();
     }
 
     private void accesoPermitido() {
-
-
-
     }
-
 }

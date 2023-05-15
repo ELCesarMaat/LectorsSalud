@@ -2,12 +2,12 @@ package com.cetis22.lectorsalud.data;
 
 import android.graphics.Bitmap;
 
+/* loaded from: classes4.dex */
 public class Personas {
-    String nombre;
-    String hospital;
     String curp;
+    String hospital;
     Bitmap imagen;
-
+    String nombre;
 
     public void setImagen(Bitmap imagen) {
         this.imagen = imagen;
@@ -20,14 +20,12 @@ public class Personas {
         this.imagen = imagen;
     }
 
-
     public Bitmap getImagen() {
-        return imagen;
+        return this.imagen;
     }
 
-
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -35,7 +33,7 @@ public class Personas {
     }
 
     public String getHospital() {
-        return hospital;
+        return this.hospital;
     }
 
     public void setHospital(String hospital) {
@@ -43,11 +41,10 @@ public class Personas {
     }
 
     public String getCurp() {
-        return curp;
+        return this.curp;
     }
 
     public void setCurp(String curp) {
         this.curp = curp;
     }
-
 }

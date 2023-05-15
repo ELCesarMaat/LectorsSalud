@@ -21,6 +21,12 @@
         android:theme="@style/Theme.LectorSalud"
         tools:targetApi="31">
         <activity
+            android:name=".ListaConsultasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NuevaCitaActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListaPacientesActivity"
             android:exported="false" />
         <activity
@@ -109,6 +115,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".ActivityExpedientePaciente"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RegistroActivity"
             android:exported="false">
             <meta-data
@@ -128,6 +141,13 @@
             android:label="@string/title_activity_login" />
         <activity
             android:name=".IniciarSecionActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".NuevaConsulta"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

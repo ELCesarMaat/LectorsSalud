@@ -1,160 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:orientation="vertical"
-    tools:context=".RegistroActivity">
-
-
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:src="@drawable/lectorlogoorigin" />
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginBottom="10dp"
-            android:text="Registra tus datos:"
-            android:textColor="@color/black"
-            android:textSize="21sp" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/NomCompletoRegist"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre Completo"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/backwithborder"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textCursorDrawable="@drawable/edit_text_cursor" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/usernameRegist"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username"
-            android:textColorHint="@color/black"
-            android:transitionName="username_tran"
-            app:counterEnabled="true"
-            app:counterMaxLength="15"
-            app:hintTextColor="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/backwithborder"
-                android:inputType="text"
-                android:textCursorDrawable="@drawable/edit_text_cursor" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/cedulaRegist"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Cedula"
-            android:textColorHint="@color/black"
-            app:counterEnabled="true"
-            app:counterMaxLength="8"
-            app:hintTextColor="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/backwithborder"
-                android:inputType="text"
-                android:textCursorDrawable="@drawable/edit_text_cursor" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailRegist"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Correo"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/backwithborder"
-                android:inputType="textEmailAddress"
-                android:textCursorDrawable="@drawable/edit_text_cursor" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/passwordRegist"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Contraseña"
-            android:textColorHint="@color/black"
-            android:transitionName="password_tran"
-            app:hintTextColor="@color/black"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/backwithborder"
-                android:inputType="textPassword"
-                android:textCursorDrawable="@drawable/edit_text_cursor" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/btnRegistro"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#DE634A"
-            android:text="REGISTRARTE"
-            android:textColor="#fff"
-            android:transitionName="button_tran" />
-
-        <Button
-            android:id="@+id/btnUsuaExistente"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="#4AB3DE"
-            android:text="Ya tienes una cuenta?"
-            android:textColor="@color/white"
-            android:transitionName="login_siginup_tran" />
-
-    </LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_gravity="center" android:layout_width="150dp" android:layout_height="150dp" android:src="@drawable/lectorlogoorigin"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="21sp" android:textColor="@color/black" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="Registra tus datos:"/>
+            <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/black" android:id="@+id/NomCompletoRegist" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nombre Completo" app:hintTextColor="@color/black">
+                <com.google.android.material.textfield.TextInputEditText android:textColor="@color/black" android:background="@drawable/backwithborder" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" android:textCursorDrawable="@drawable/edit_text_cursor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/black" android:id="@+id/usernameRegist" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Username" android:transitionName="username_tran" app:counterEnabled="true" app:counterMaxLength="15" app:hintTextColor="@color/black">
+                <com.google.android.material.textfield.TextInputEditText android:background="@drawable/backwithborder" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:inputType="text" android:textCursorDrawable="@drawable/edit_text_cursor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/black" android:id="@+id/cedulaRegist" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Cedula" app:counterEnabled="true" app:counterMaxLength="8" app:hintTextColor="@color/black">
+                <com.google.android.material.textfield.TextInputEditText android:background="@drawable/backwithborder" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:inputType="text" android:textCursorDrawable="@drawable/edit_text_cursor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/black" android:id="@+id/emailRegist" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Correo" app:hintTextColor="@color/black">
+                <com.google.android.material.textfield.TextInputEditText android:background="@drawable/backwithborder" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:inputType="textEmailAddress" android:textCursorDrawable="@drawable/edit_text_cursor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/black" android:id="@+id/passwordRegist" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Contraseña" android:transitionName="password_tran" app:hintTextColor="@color/black" app:passwordToggleEnabled="true" app:passwordToggleTint="@color/black">
+                <com.google.android.material.textfield.TextInputEditText android:background="@drawable/backwithborder" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:inputType="textPassword" android:textCursorDrawable="@drawable/edit_text_cursor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/black" android:id="@+id/txt_hospital_register" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Hospital" app:hintTextColor="@color/black" app:passwordToggleTint="@color/black">
+                <com.google.android.material.textfield.TextInputEditText android:background="@drawable/backwithborder" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:inputType="text" android:textCursorDrawable="@drawable/edit_text_cursor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button android:textColor="#fff" android:id="@+id/btnRegistro" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="12dp" android:text="REGISTRARTE" android:transitionName="button_tran" android:backgroundTint="#de634a"/>
+            <Button android:textColor="@color/white" android:id="@+id/btnUsuaExistente" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="5dp" android:text="Ya tienes una cuenta?" android:transitionName="login_siginup_tran" android:backgroundTint="#4ab3de"/>
+        </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

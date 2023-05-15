@@ -1,30 +1,28 @@
 package com.cetis22.lectorsalud.data;
 
-/**
- * A generic class that holds a result success w/ data or an error exception.
- */
+/* loaded from: classes4.dex */
 public class Result<T> {
-    // hide the private constructor to limit subclass types (Success, Error)
     private Result() {
     }
 
-    @Override
     public String toString() {
-        if (this instanceof Result.Success) {
-            Result.Success success = (Result.Success) this;
+        if (this instanceof Success) {
+            Success success = (Success) this;
             return "Success[data=" + success.getData().toString() + "]";
-        } else if (this instanceof Result.Error) {
-            Result.Error error = (Result.Error) this;
+        } else if (this instanceof Error) {
+            Error error = (Error) this;
             return "Error[exception=" + error.getError().toString() + "]";
+        } else {
+            return "";
         }
-        return "";
     }
 
-    // Success sub-class
-    public final static class Success<T> extends Result {
+    /* loaded from: classes4.dex */
+    public static final class Success<T> extends Result {
         private T data;
 
         public Success(T data) {
+            super();
             this.data = data;
         }
 
@@ -33,11 +31,12 @@ public class Result<T> {
         }
     }
 
-    // Error sub-class
-    public final static class Error extends Result {
+    /* loaded from: classes4.dex */
+    public static final class Error extends Result {
         private Exception error;
 
         public Error(Exception error) {
+            super();
             this.error = error;
         }
 

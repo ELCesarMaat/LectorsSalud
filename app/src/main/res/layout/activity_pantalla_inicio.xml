@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".PantallaInicio">
+    android:background="@color/white">
 
-    <include layout="@layout/action_bar"/>
+    <include layout="@layout/action_bar" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,9 +34,19 @@
             android:textAllCaps="true"
             android:textColor="#454545"
             android:textSize="20sp"
-            android:textStyle="bold"
-            tools:text="Cesar Maat Robles Castillo" />
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/txt_hospital_principal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#454545"
+            android:textSize="20sp"
+            android:textStyle="italic|bold" />
 
         <Button
             android:id="@+id/btnIrAlectorcodigo"
@@ -48,7 +55,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="5dp"
-            android:backgroundTint="#3887F9"
+            android:backgroundTint="#3887f9"
             android:text="ESCANEAR QR"
             android:textColor="@color/white"
             android:textSize="15sp" />
@@ -60,7 +67,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:backgroundTint="#FDA231"
+            android:backgroundTint="#fda231"
             android:text="AGREGAR PACIENTE"
             android:textColor="@color/white"
             android:textSize="15sp" />
@@ -72,26 +79,23 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:backgroundTint="#57BD2A"
+            android:backgroundTint="#57bd2a"
             android:text="Mis pacientes"
             android:textColor="@color/white"
             android:textSize="15sp" />
-
-
     </LinearLayout>
 
     <Button
         android:id="@+id/btn_cerrar_sesion"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:backgroundTint="#BD2A40"
+        android:backgroundTint="#bd2a40"
         android:text="Cerrar sesión"
         android:textColor="@color/white"
         android:textSize="15sp"
-        app:layout_constraintVertical_bias="0.95"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.95" />
 </androidx.constraintlayout.widget.ConstraintLayout>
