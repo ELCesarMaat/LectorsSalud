@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -68,7 +69,8 @@ public class ListaPacientesActivity extends AppCompatActivity {
             final String curp = document.getData().get("curp").toString();
             final String name = document.getData().get("nombre").toString();
             final String afiliado = document.getData().get("afiliado").toString();
-            FirebaseStorage.getInstance().getReference().child(curp + ".jpg").getBytes(Long.MAX_VALUE).addOnSuccessListener(new OnSuccessListener() { // from class: com.cetis22.lectorsalud.ListaPacientesActivity$$ExternalSyntheticLambda0
+
+            FirebaseStorage.getInstance().getReference().child(curp + ".jpg").getBytes(Long.MAX_VALUE).addOnSuccessListener(new OnSuccessListener() {
                 @Override // com.google.android.gms.tasks.OnSuccessListener
                 public final void onSuccess(Object obj) {
                     ListaPacientesActivity.this.m114x2bedd939((byte[]) obj);
@@ -81,7 +83,7 @@ public class ListaPacientesActivity extends AppCompatActivity {
             });
         }
         if (this.cont == 0) {
-            this.txtNoPacientes.setVisibility(0);
+            this.txtNoPacientes.setVisibility(View.VISIBLE);
         }
     }
 
@@ -89,6 +91,7 @@ public class ListaPacientesActivity extends AppCompatActivity {
     /* renamed from: lambda$dataInitialize$0$com-cetis22-lectorsalud-ListaPacientesActivity  reason: not valid java name */
     public /* synthetic */ void m114x2bedd939(byte[] bytes) {
         this.imagen = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+        this.imagen = Bitmap.createScaledBitmap(this.imagen, this.imagen.getWidth()/4, this.imagen.getHeight()/4, true);
         this.bytesImgList.add(bytes);
     }
 
