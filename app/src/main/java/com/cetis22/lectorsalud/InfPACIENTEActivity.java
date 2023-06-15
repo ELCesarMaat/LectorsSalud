@@ -81,6 +81,7 @@ public class InfPACIENTEActivity extends AppCompatActivity {
     /* renamed from: lambda$onCreate$0$com-cetis22-lectorsalud-InfPACIENTEActivity  reason: not valid java name */
     public /* synthetic */ void m107lambda$onCreate$0$comcetis22lectorsaludInfPACIENTEActivity(byte[] ok) {
         this.imagen = BitmapFactory.decodeByteArray(ok, 0, ok.length);
+        imagen = Bitmap.createScaledBitmap(imagen, imagen.getWidth()/4, imagen.getHeight()/4, true);
         this.b.profileImageJ.setImageBitmap(this.imagen);
     }
 }

@@ -39,7 +39,7 @@ public class GuardarImgenPrueba extends AppCompatActivity {
     private void saveImage() {
         this.relativeLayout.setDrawingCacheEnabled(true);
         this.relativeLayout.buildDrawingCache();
-        this.relativeLayout.setDrawingCacheQuality(1048576);
+        this.relativeLayout.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
         Bitmap bitmap = this.relativeLayout.getDrawingCache();
         save(bitmap);
     }

@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -24,9 +27,6 @@
             android:name=".ListaConsultasActivity"
             android:exported="false" />
         <activity
-            android:name=".NuevaCitaActivity"
-            android:exported="false" />
-        <activity
             android:name=".ListaPacientesActivity"
             android:exported="false" />
         <activity
@@ -45,23 +45,10 @@
             android:name=".InfPACIENTEActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.login.InformacionPaciente"
-            android:exported="false"
-            android:label="@string/title_activity_informacion_paciente" />
-        <activity
             android:name=".QRgeneradoActivity"
             android:exported="false" />
         <activity
             android:name=".GeneradorQRActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NPaciente5Activity"
-            android:exported="false" />
-        <activity
-            android:name=".NPaciente3Activity"
-            android:exported="false" />
-        <activity
-            android:name=".NPaciente2Activity"
             android:exported="false" />
         <activity
             android:name=".DatosNuevoPacienteActivity"
@@ -86,27 +73,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".LecQRActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".LectorQrrActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".LectorActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".SelectorActivity"
             android:exported="false">
@@ -128,17 +95,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".ActivityBlanco"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
         <activity
             android:name=".IniciarSecionActivity"
             android:exported="false">
